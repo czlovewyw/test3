@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+    <appenders>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <File name="FILE" fileName="/tmp/logs/mnds.log" append="false">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+    </appenders>
+    <loggers>
+        <logger name="hc.common.extension.ExtensionLoader" level="error" additivity="false">
+            <appender-ref ref="CONSOLE"/>
+        </logger>
+        <logger name="hc.soa.remoting.exchange.support.header" level="error" additivity="false">
+            <appender-ref ref="CONSOLE"/>
+        </logger>
+        <logger name="hc.data.node.services.impl.AppAliveWatcher" level="error" additivity="false">
+            <appender-ref ref="CONSOLE"/>
+        </logger>
+        <logger name="hc.data.node.transport.MasterHandler" level="error" additivity="false">
+            <appender-ref ref="CONSOLE"/>
+        </logger>
+        <logger name="hc" level="debug" additivity="false">
+            <appender-ref ref="CONSOLE"/>
+        </logger>
+
+        <root level="error">
+            <appender-ref ref="CONSOLE"/>
+        </root>
+    </loggers>
+</configuration>

@@ -1,0 +1,12 @@
+[
+  {
+    "code": "_main_assets_url",
+    "name": "主站静态文件地址",
+    "val": "http://ued.supconit.com/latest",
+    "type": 3,
+    "application": ",*,",
+    "showable": true,
+    "editable": true,
+    "deleteable": false
+  }
+]
